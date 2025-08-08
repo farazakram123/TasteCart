@@ -5,8 +5,9 @@
     align-items: center;
 }
 .navbar .logo{
-    height: 80px;
-    width: 150px;
+    font-size: 30px;
+    color: rgb(4, 3, 3);
+    font-family: "Playwrite HU", cursive;
 }
 .navbar-menu{
     list-style: none;
