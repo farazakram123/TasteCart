@@ -22,3 +22,18 @@
 .app-download-img img:hover{
     transform: scale(1.05);
 }
+@media (max-width : 980px) {
+    .app-download p {
+        font-size: 35px;
+    }
+}
+@media (max-width : 780px) {
+    .app-download p {
+        font-size: 30px;
+    }
+}
+@media (max-width : 400px) {
+    .app-download p {
+        font-size: 25px;
+    }
+}

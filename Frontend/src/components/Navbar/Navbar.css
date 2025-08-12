@@ -53,3 +53,45 @@
     top: -15%;
     right: -25%;
 }
+@media (max-width : 980px){
+    .navbar .logo{
+        font-size: 22px;
+    }
+    .navbar-menu{
+        gap: 15px;
+        font-size: 14px;
+    }
+}
+@media (max-width : 880px){
+    .navbar .logo{
+        font-size: 18px;
+    }
+    .navbar-menu li{
+        font-size: 13px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 14px;
+    }
+}
+@media (max-width : 780px){
+    .navbar-menu li{
+        display: none;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 12px;
+    }
+}
+@media (max-width : 600px){
+    .navbar-right img{
+        width: 18px;
+    }
+    .navbar-right button{
+        font-size: 10px;
+        height: 28px;
+    }
+}

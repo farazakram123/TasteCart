@@ -47,3 +47,13 @@
     border: none;
     background-color: grey;
 }
+@media (max-width : 720px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  .footer-copyright {
+    text-align: center;
+  }
+}
