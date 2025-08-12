@@ -75,7 +75,7 @@
     }
 }
 @media (max-width : 780px){
-    .navbar-menu li{
+    .navbar-menu{
         display: none;
     }
     .navbar-right img{
