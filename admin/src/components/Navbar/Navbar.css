@@ -1,0 +1,23 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 4%;
+}
+.admin-logo:hover{
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    transform: scale(1.02);
+}
+.admin-logo h1{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Playwrite HU", cursive;
+}
+.admin-logo p{
+    font-size: 14px;
+    font-style: italic;
+}
+.profile img{
+    width: max(45px, 3.5vw); 
+}
