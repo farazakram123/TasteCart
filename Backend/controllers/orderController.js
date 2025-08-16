@@ -30,3 +30,46 @@ export const placeOrder = async (req, res) => {
         
     }
 }
+
+export const verifyOrder = async (req, res) => {
+    const {orderId, success} = req.body;
+
+    try {
+        if(success) {
+            res.json({
+                success : true,
+                message : "Order verified successfully"
+            })
+        } else {
+            await Order.findByIdAndDelete(orderId);
+            res.json({
+                success : false,
+                message : "Order verification failed"
+            })
+        }
+
+    } catch (error) {
+        res.status(500).json({
+            success : false,
+            message : error.message
+        });
+    }
+}
+
+export const userOrders = async (req, res) => {
+    try {
+        const orders = await Order.find({userId : req.body.userId});
+
+        res.status(200).json({
+            success : true,
+            message : "User orders fetched successfully",
+            data : orders
+        })
+    } catch (error) {
+        res.status(500).json({
+            success : false,
+            message : error.message
+        });
+    }
+
+}
