@@ -14,7 +14,7 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    cart: {
+    cartData: {
         type: Object,
         default: {}
     }
