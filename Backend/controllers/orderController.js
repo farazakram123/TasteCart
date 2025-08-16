@@ -73,3 +73,22 @@ export const userOrders = async (req, res) => {
     }
 
 }
+
+// Listing orders for admin panel
+export const listOrders = async (req, res) => {
+    try {
+        const orders = await Order.find({});
+        res.json({
+            success : true,
+            message : "All orders fetched successfully",
+            data : orders
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            success : false,
+            message : error.message
+        });
+
+    }
+}
