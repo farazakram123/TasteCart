@@ -79,7 +79,7 @@ bun run build
 ```
 
 ## Connection with Backend
-The frontend communicates with the backend API running on `http://localhost:8000` by default. This can be configured in the `StoreContext.jsx` file if needed.
+The frontend communicates with the backend API running on `https://tastecart-backend.onrender.com` by default. This can be configured in the `StoreContext.jsx` file if needed.
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
