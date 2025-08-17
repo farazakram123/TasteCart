@@ -6,7 +6,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = ({ children }) => {
 
     const [cartItems, setCartItems] = useState({});
-    const url = 'https://tastecart-backend.onrender.com';
+    const url = 'http://tastecart-backend.onrender.com';
     const [token, setToken] = useState("");
     const [food_list, setFood_list] = useState([]);
 
@@ -16,14 +16,14 @@ const StoreContextProvider = ({ children }) => {
         } else {
             setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
         }
-        if(token){
-            await axios.put(`${url}/api/cart/add`, {itemId}, {headers : {token}});
+        if (token) {
+            await axios.put(`${url}/api/cart/add`, { itemId }, { headers: { token } });
         }
     }
     const removeFromCart = async (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
-        if(token){
-            await axios.put(`${url}/api/cart/remove`, {itemId}, {headers : {token}});
+        if (token) {
+            await axios.put(`${url}/api/cart/remove`, { itemId }, { headers: { token } });
         }
     }
     const getTotalCartAmount = () => {
@@ -43,7 +43,7 @@ const StoreContextProvider = ({ children }) => {
     }
 
     const loadCartData = async (token) => {
-        const response = await axios.get(`${url}/api/cart/get`, {headers : {token}});
+        const response = await axios.get(`${url}/api/cart/get`, { headers: { token } });
         setCartItems(response.data.cartData);
     }
 
