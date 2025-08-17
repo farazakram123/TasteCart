@@ -2,7 +2,7 @@ import Order from '../models/orderModel.js';
 import User from '../models/userModel.js';
 // Place Order
 export const placeOrder = async (req, res) => {
-    const frontend_url = 'http://localhost:5173';
+    const frontend_url = 'https://tastecart-frontend.onrender.com';
 
     try {
         const newOrder = new Order({
