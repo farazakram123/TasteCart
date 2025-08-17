@@ -4,7 +4,6 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useContext } from 'react';
 import { StoreContext } from '../../context/StoreContext';
 import axios from 'axios';
-import { useEffect } from 'react';
 
 const Verify = () => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -23,14 +22,12 @@ const Verify = () => {
         }
     }
 
-    useEffect(() => {
-        verifyPayment();
-    }, [])
-
   return (
     <div className='verify'>
       <div className="spinner">
-
+      </div>
+      <div className="container">
+        <button onClick={() => verifyPayment()} className='confirm'>Proceed </button>
       </div>
     </div>
   )

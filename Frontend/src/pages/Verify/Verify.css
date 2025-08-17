@@ -11,6 +11,22 @@
     border-radius: 50%;
     animation: rotate 1s infinite linear;
 }
+.verify .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.confirm{
+    width: 8vw;
+    height: 4vw;
+    border: none;
+    border-radius: 4px;
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
 @keyframes rotate{
     100%{
         transform: rotate(360deg);
