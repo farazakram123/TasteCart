@@ -4,6 +4,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useContext } from 'react';
 import { StoreContext } from '../../context/StoreContext';
 import axios from 'axios';
+import { toast } from'react-toastify';
 
 const Verify = () => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -11,13 +12,15 @@ const Verify = () => {
     const orderId = searchParams.get('orderId');
     const {url} = useContext(StoreContext);
     const navigate = useNavigate();
-    
+
     const verifyPayment = async () => {
         const response = await axios.post(`${url}/api/order/verify`, {success, orderId});
 
         if(response.data.success){
+            toast.success(response.data.message);
             navigate('/myorders');
         } else {
+            toast.error('Order Not Placed');
             navigate('/');
         }
     }

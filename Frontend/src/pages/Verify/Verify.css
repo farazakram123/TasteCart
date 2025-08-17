@@ -27,6 +27,15 @@
     text-align: center;
     cursor: pointer;
 }
+@media (max-width: 700px) {
+    .confirm{
+        width: 25vw;
+        height: 5vh;
+        padding: 7px;
+        font-size: 15px;
+    }
+
+}
 @keyframes rotate{
     100%{
         transform: rotate(360deg);

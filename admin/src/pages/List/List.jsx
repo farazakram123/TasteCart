@@ -9,6 +9,7 @@ const List = ({url}) => {
   const fetchList = async () => {
     const response = await axios.get(`${url}/api/food/list`);
     if(response.data.success){
+      toast.success(response.data.message);
       setList(response.data.data);
     } else{
       toast.error(response.data.message);
